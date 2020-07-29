@@ -1,3 +1,5 @@
+import os
+
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QMainWindow
 
@@ -18,4 +20,5 @@ class Window(QMainWindow):
         self.setCentralWidget(Login())
         self.resize(Weight,Height)
         self.setWindowTitle(Title)
+        print(os.path.abspath(static_for("todo.ico")))
         self.setWindowIcon(QIcon(static_for("todo.ico")))

@@ -14,5 +14,21 @@ class MyWidget:
             return widget
         return wrapper
 
+    def switch(self, close_attr, show_attr):
+        # switch central widget of MainWindow. close current and show another.
+        if hasattr(self, close_attr):
+            close_w = getattr(self, close_attr)
+            close_w.close()
+        if not hasattr(self, show_attr):
+            module = __import__("interface")
+            setattr(self, show_attr, getattr(module, show_attr)())
+        else:
+            raise RuntimeError("there is not a widget to show!")
+        show_w = getattr(self, show_attr)
+        my_widget.Window.setCentralWidget(show_w)
+        show_w.show()
+
+
+
 
 my_widget = MyWidget()

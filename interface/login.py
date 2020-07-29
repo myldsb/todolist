@@ -60,8 +60,4 @@ class BtnBox(QHBoxLayout):
         self.addWidget(siginin_btn)
         self.addStretch(1)
 
-        def f():
-            my_widget.Window.setCentralWidget(Main())
-            my_widget.Login.close()
-            my_widget.Main.show()
-        login_btn.clicked.connect(f)
+        login_btn.clicked.connect(lambda: my_widget.switch("Login", "Main"))
