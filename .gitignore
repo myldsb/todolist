@@ -1,0 +1,14 @@
+
+#########################
+# author: Yao Shaomin 	#
+# Date: 2020.07.20	  	#
+# project: todolist   	#
+#########################
+
+
+# the cache
+__pycache__/
+*.py[cod]
+
+# the pycharm
+.idea/
