@@ -18,7 +18,9 @@ class Window(QMainWindow):
         super().__init__()
 
         self.setCentralWidget(Login())
+        self.setWindowIcon(QIcon("./static/todo.ico"))
         self.resize(Weight,Height)
         self.setWindowTitle(Title)
         print(os.path.abspath(static_for("todo.ico")))
-        self.setWindowIcon(QIcon(static_for("todo.ico")))
+        # self.setWindowIcon(QIcon(static_for("./static/todo.ico")))
+        self.show()
