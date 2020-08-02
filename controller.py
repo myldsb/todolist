@@ -19,6 +19,7 @@ class MyWidget:
         if hasattr(self, close_attr):
             close_w = getattr(self, close_attr)
             close_w.close()
+            delattr(self, close_attr)
         if not hasattr(self, show_attr):
             module = __import__("interface")
             setattr(self, show_attr, getattr(module, show_attr)())
