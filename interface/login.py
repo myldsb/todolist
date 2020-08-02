@@ -1,9 +1,10 @@
-import os
+"""
+the Login class
+"""
 
 from PyQt5 import QtCore
 from PyQt5.QtWidgets import *
 
-from interface.main import Main
 from controller import my_widget
 
 Height = 800

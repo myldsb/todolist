@@ -1,3 +1,5 @@
+-- the create and init sql
+
 -- create user table.
 create table if not exists user (id integer primary key autoincrement,
                                 name varchar(20) not null unique ,

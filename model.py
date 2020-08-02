@@ -1,6 +1,8 @@
-import sqlite3
-from datetime import datetime
+"""
+model and init sql func.
+"""
 
+import sqlite3
 
 from sqlalchemy import Column, VARCHAR, INTEGER, BOOLEAN, CHAR, ForeignKey
 from sqlalchemy.orm import relationship
@@ -21,7 +23,7 @@ class TodoList(Base):
     id = Column(INTEGER, primary_key=True, autoincrement=True)
     title = Column(VARCHAR(255), nullable=False)
     body = Column(VARCHAR(255), nullable=False)
-    time = Column(CHAR(16), nullable=False, default=current_time)
+    time = Column(CHAR(16), nullable=False, default=current_time())
     send_email = Column(BOOLEAN, nullable=False, default=False)
     state = Column(BOOLEAN, nullable=False, default=False)
     remark = Column(VARCHAR(255), nullable=False, default="")

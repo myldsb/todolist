@@ -1,3 +1,7 @@
+"""
+the main box, switch the Login and Main in its central window
+"""
+
 import os
 
 from PyQt5.QtGui import QIcon

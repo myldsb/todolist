@@ -1,3 +1,8 @@
+"""
+the controller of all widgets of the app.
+the my_widget is a global unique instance like the app of Flask.
+"""
+
 from functools import wraps
 
 class MyWidget:
@@ -31,5 +36,5 @@ class MyWidget:
 
 
 
-
+# the wisgets controller.
 my_widget = MyWidget()
